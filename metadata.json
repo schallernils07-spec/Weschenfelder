@@ -1,0 +1,6 @@
+{
+  "name": "Gastrotechnik Weschenfelder",
+  "description": "Ihr Partner für professionelle Gastronomie- und Großküchentechnik in Pößneck und Umgebung. Beratung, Planung, Verkauf, Montage, Reparatur und Wartung seit 1997.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

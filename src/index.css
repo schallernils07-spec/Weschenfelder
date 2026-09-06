@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    background-color: #f8f9fa;
+    color: #18181b;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Bento card styling */
+.bento-card {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 1.5rem; /* rounded-3xl */
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card-dark {
+  background-color: #1a1a1a;
+  border: 1px solid #27272a;
+  border-radius: 1.5rem;
+  color: #ffffff;
+}
+
+.bento-card-accent {
+  background-color: #2563eb; /* blue-600 */
+  border-radius: 1.5rem;
+  color: #ffffff;
+}
+
+/* Subtle dot grid pattern */
+.bg-bento-dot {
+  background-image: radial-gradient(#d4d4d8 1px, transparent 1px);
+  background-size: 24px 24px;
+}
