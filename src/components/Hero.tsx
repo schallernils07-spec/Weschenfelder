@@ -153,22 +153,31 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreServices }) 
 
             {/* Bento Tile 3: Crisp White Leasing Quick Tile */}
             <div
-              onClick={() => onOpenContact('Anfrage zu Leasinglösungen')}
+              onClick={() => {
+                const leasingElem = document.getElementById('leasing');
+                if (leasingElem) {
+                  leasingElem.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  onOpenContact('Anfrage zu Leasing & Finanzierung');
+                }
+              }}
               className="bg-white rounded-3xl p-6 shadow-xs border border-zinc-200 flex items-center justify-between cursor-pointer hover:border-zinc-400 transition-colors group"
             >
               <div className="flex flex-col">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-400">
-                  Finanzierung &amp; Investition
+                <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600 flex items-center gap-1.5 mb-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                  NEU im Angebot
                 </span>
                 <span className="text-lg font-bold text-zinc-900 group-hover:text-blue-600 transition-colors">
-                  Leasinglösungen
+                  Leasing für Gastrogeräte
                 </span>
                 <span className="text-xs text-zinc-500 mt-0.5">
-                  Flexibel &amp; liquiditätsschonend
+                  Ohne Kapitaleinsatz • Wunschliste online erstellen
                 </span>
               </div>
               <button
-                aria-label="Leasing anfragen"
+                type="button"
+                aria-label="Zum Leasing-Angebot"
                 className="bg-zinc-900 text-white p-3 rounded-2xl group-hover:bg-blue-600 transition-colors shrink-0 ml-3"
               >
                 <ArrowRight className="w-5 h-5" />

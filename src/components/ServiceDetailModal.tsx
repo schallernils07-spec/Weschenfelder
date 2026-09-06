@@ -22,44 +22,54 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
         role="dialog"
         aria-modal="true"
       >
-        {/* Modal Header with Image */}
-        <div className="relative h-48 sm:h-56 w-full overflow-hidden bg-zinc-950 shrink-0">
+        {/* Modal Header with Uncropped Equipment Stage */}
+        <div className="relative h-60 sm:h-72 w-full overflow-hidden bg-zinc-950 flex items-center justify-center p-6 shrink-0 border-b border-zinc-800">
+          {/* Ambient Backdrop */}
+          <img
+            src={service.image}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover blur-xl opacity-20 scale-110 pointer-events-none"
+          />
+
+          {/* Full Uncropped Equipment Image */}
           <img
             src={service.image}
             alt={service.title}
-            className="w-full h-full object-cover opacity-75"
+            className="relative z-10 max-h-full max-w-full object-contain drop-shadow-xl"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent" />
-          
+
           <button
             id="close-service-modal-btn"
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 rounded-full bg-black/60 hover:bg-black text-white transition-colors focus:outline-none"
+            className="absolute top-4 right-4 z-30 p-2 rounded-full bg-black/70 hover:bg-black text-white transition-colors focus:outline-none border border-white/20"
             aria-label="Schließen"
           >
             <X className="w-5 h-5" />
           </button>
 
-          <div className="absolute bottom-4 left-6 right-6">
-            <div className="flex flex-wrap items-center gap-2 mb-1">
-              <span className="text-[10px] font-bold text-blue-400 uppercase tracking-widest">
-                Leistungsbereich {service.number}
+          {/* Number & Model Label floating at bottom */}
+          <div className="absolute bottom-3 left-4 right-4 flex flex-wrap items-center justify-between gap-2 z-20 pointer-events-none">
+            <span className="px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-xs border border-white/20 text-[11px] font-bold text-blue-400 uppercase tracking-wider">
+              Leistungsbereich {service.number}
+            </span>
+            {service.imageLabel && (
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-xs border border-white/20 text-[11px] font-medium text-emerald-400">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span>{service.imageLabel}</span>
               </span>
-              {service.imageLabel && (
-                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-black/60 backdrop-blur-xs border border-white/20 text-[10px] font-medium text-emerald-400">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                  <span>{service.imageLabel}</span>
-                </span>
-              )}
-            </div>
-            <h3 className="font-display text-2xl sm:text-3xl font-bold text-white leading-tight">
-              {service.title}
-            </h3>
+            )}
           </div>
         </div>
 
         {/* Modal Body */}
         <div className="p-6 sm:p-8 overflow-y-auto space-y-6">
+          <div>
+            <h3 className="font-display text-2xl sm:text-3xl font-bold text-zinc-900 leading-tight">
+              {service.title}
+            </h3>
+          </div>
+
           <p className="text-zinc-600 text-xs sm:text-sm leading-relaxed">
             {service.fullDesc}
           </p>

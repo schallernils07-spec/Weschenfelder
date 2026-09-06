@@ -22,11 +22,15 @@ import { COMPANY_INFO } from './data/companyData';
 
 export default function App() {
   const [contactSubject, setContactSubject] = useState<string>('Allgemeine Beratung & Anfrage');
+  const [contactMessage, setContactMessage] = useState<string>('');
   const [legalModal, setLegalModal] = useState<'impressum' | 'datenschutz' | null>(null);
 
-  const handleOpenContact = (subject?: string) => {
+  const handleOpenContact = (subject?: string, message?: string) => {
     if (subject) {
       setContactSubject(subject);
+    }
+    if (message !== undefined) {
+      setContactMessage(message);
     }
     const contactElem = document.getElementById('kontakt');
     if (contactElem) {
@@ -81,6 +85,7 @@ export default function App() {
         {/* 10. Kontaktbereich mit Formularen, Karte & Öffnungszeiten */}
         <ContactSection
           initialSubject={contactSubject}
+          initialMessage={contactMessage}
           onOpenPrivacy={() => setLegalModal('datenschutz')}
         />
       </main>

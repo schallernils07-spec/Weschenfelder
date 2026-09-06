@@ -17,11 +17,13 @@ import { ContactFormData } from '../types';
 
 interface ContactSectionProps {
   initialSubject?: string;
+  initialMessage?: string;
   onOpenPrivacy: () => void;
 }
 
 export const ContactSection: React.FC<ContactSectionProps> = ({
   initialSubject = '',
+  initialMessage = '',
   onOpenPrivacy,
 }) => {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -30,7 +32,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
     email: '',
     phone: '',
     subject: initialSubject || 'Beratungsanfrage Gastronomietechnik',
-    message: '',
+    message: initialMessage || '',
     consent: false,
   });
 
@@ -43,7 +45,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
     if (initialSubject) {
       setFormData((prev) => ({ ...prev, subject: initialSubject }));
     }
-  }, [initialSubject]);
+    if (initialMessage) {
+      setFormData((prev) => ({ ...prev, message: initialMessage }));
+    }
+  }, [initialSubject, initialMessage]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>

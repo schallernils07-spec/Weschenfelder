@@ -155,43 +155,55 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenContact 
               className="group bg-white rounded-3xl border border-zinc-200 overflow-hidden shadow-xs hover:shadow-md hover:border-zinc-300 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                {/* Visual Header */}
-                <div className="relative h-48 overflow-hidden bg-zinc-900">
+                {/* Visual Header with Uncropped Equipment Stage */}
+                <div className="relative h-56 sm:h-60 overflow-hidden bg-zinc-950 flex items-center justify-center p-4">
+                  {/* Ambient Backdrop */}
+                  <img
+                    src={service.image}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover blur-xl opacity-25 scale-110 pointer-events-none"
+                  />
+
+                  {/* Fully Visible Uncropped Image */}
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85"
+                    className="relative z-10 max-h-full max-w-full object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent" />
-                  
-                  {/* Bento Number Tag & Authentic Image Source Tag */}
-                  <div className="absolute top-4 left-4">
-                    <span className="w-8 h-8 rounded-lg bg-zinc-900/90 backdrop-blur-xs text-white border border-white/20 text-xs font-mono font-bold flex items-center justify-center group-hover:bg-blue-600 group-hover:border-blue-600 transition-colors">
+
+                  {/* Bento Number Tag */}
+                  <div className="absolute top-3.5 left-3.5 z-20">
+                    <span className="w-8 h-8 rounded-lg bg-zinc-900/90 backdrop-blur-xs text-white border border-white/20 text-xs font-mono font-bold flex items-center justify-center group-hover:bg-blue-600 group-hover:border-blue-600 transition-colors shadow-xs">
                       {service.number}
                     </span>
                   </div>
 
+                  {/* Image Source / Model Tag */}
                   {service.imageLabel && (
-                    <div className="absolute top-4 right-4 max-w-[65%]">
-                      <span className="px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-xs text-white border border-white/20 text-[10px] font-medium flex items-center gap-1.5 truncate shadow-xs">
+                    <div className="absolute bottom-3 right-3 max-w-[75%] z-20">
+                      <span className="px-2.5 py-1 rounded-md bg-zinc-900/90 backdrop-blur-xs text-white border border-white/20 text-[10px] font-medium flex items-center gap-1.5 truncate shadow-xs">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>
                         <span className="truncate">{service.imageLabel}</span>
                       </span>
                     </div>
                   )}
-
-                  <div className="absolute bottom-3.5 left-4 right-4">
-                    <h3 className="font-display text-xl font-bold text-white leading-tight">
-                      {service.title}
-                    </h3>
-                  </div>
                 </div>
 
                 {/* Content */}
                 <div className="p-6 space-y-4">
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600 block mb-1">
+                      Bereich {service.number}
+                    </span>
+                    <h3 className="font-display text-xl font-bold text-zinc-900 leading-tight">
+                      {service.title}
+                    </h3>
+                  </div>
+
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <div className="w-8 h-8 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0 mt-0.5 text-blue-600">
                       {iconMap[service.icon]}
                     </div>
                     <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
