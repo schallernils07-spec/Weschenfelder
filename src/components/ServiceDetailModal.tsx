@@ -22,22 +22,32 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
         role="dialog"
         aria-modal="true"
       >
-        {/* Modal Header with Uncropped Equipment Stage */}
-        <div className="relative h-60 sm:h-72 w-full overflow-hidden bg-zinc-950 flex items-center justify-center p-6 shrink-0 border-b border-zinc-800">
-          {/* Ambient Backdrop */}
-          <img
-            src={service.image}
-            alt=""
-            aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover blur-xl opacity-20 scale-110 pointer-events-none"
-          />
+        {/* Modal Header Window (Borderless inside window frame) */}
+        <div className="relative h-60 sm:h-72 w-full overflow-hidden bg-zinc-950 flex items-center justify-center shrink-0 border-b border-zinc-800">
+          {service.isPhoto ? (
+            /* Full-bleed Photo with no margins/borders and full visibility */
+            <div className="relative w-full h-full">
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none" />
+            </div>
+          ) : (
+            /* Equipment Cutout Stage: Background completely removed, no white/blue box */
+            <div className="relative w-full h-full flex items-center justify-center p-6 bg-gradient-to-b from-zinc-900 via-zinc-900 to-zinc-950">
+              {/* Subtle Studio Spotlight */}
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-700/30 via-zinc-900/50 to-zinc-950 pointer-events-none" />
 
-          {/* Full Uncropped Equipment Image */}
-          <img
-            src={service.image}
-            alt={service.title}
-            className="relative z-10 max-h-full max-w-full object-contain drop-shadow-xl"
-          />
+              {/* Transparent Cutout without rectangular borders */}
+              <img
+                src={service.image}
+                alt={service.title}
+                className="relative z-10 max-h-[92%] max-w-[92%] object-contain drop-shadow-[0_20px_36px_rgba(0,0,0,0.75)]"
+              />
+            </div>
+          )}
 
           <button
             id="close-service-modal-btn"

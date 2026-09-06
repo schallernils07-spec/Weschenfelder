@@ -8,6 +8,7 @@ export interface ServiceCategory {
   icon: string;
   image: string;
   imageLabel?: string;
+  isPhoto?: boolean;
   features: string[];
   brands?: string[];
 }

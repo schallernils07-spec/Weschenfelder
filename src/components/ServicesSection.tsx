@@ -155,23 +155,34 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenContact 
               className="group bg-white rounded-3xl border border-zinc-200 overflow-hidden shadow-xs hover:shadow-md hover:border-zinc-300 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                {/* Visual Header with Uncropped Equipment Stage */}
-                <div className="relative h-56 sm:h-60 overflow-hidden bg-zinc-950 flex items-center justify-center p-4">
-                  {/* Ambient Backdrop */}
-                  <img
-                    src={service.image}
-                    alt=""
-                    aria-hidden="true"
-                    className="absolute inset-0 w-full h-full object-cover blur-xl opacity-25 scale-110 pointer-events-none"
-                  />
+                {/* Visual Header Window (Borderless inside window frame) */}
+                <div className="relative h-56 sm:h-60 overflow-hidden bg-zinc-950 flex items-center justify-center border-b border-zinc-100">
+                  {service.isPhoto ? (
+                    /* Full-bleed Photo with no margins/borders and full visibility */
+                    <div className="relative w-full h-full">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                    </div>
+                  ) : (
+                    /* Equipment Cutout Stage: Background completely removed, no white/blue box */
+                    <div className="relative w-full h-full flex items-center justify-center p-3 bg-gradient-to-b from-zinc-900 via-zinc-900 to-zinc-950">
+                      {/* Subtle Studio Spotlight */}
+                      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-700/30 via-zinc-900/50 to-zinc-950 pointer-events-none" />
 
-                  {/* Fully Visible Uncropped Image */}
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="relative z-10 max-h-full max-w-full object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
+                      {/* Transparent Cutout without rectangular borders */}
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="relative z-10 max-h-[90%] max-w-[90%] object-contain drop-shadow-[0_16px_28px_rgba(0,0,0,0.7)] group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
 
                   {/* Bento Number Tag */}
                   <div className="absolute top-3.5 left-3.5 z-20">

@@ -59,7 +59,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     fullDesc: 'Leistungsstarke Herde, Griddleplatten, Fritteusen, Nudelkocher, Kippbratpfannen und Kessel in Elektro- oder Gasausführung. Wir beraten Sie herstellerunabhängig zur passenden Gerätedimensionierung für maximale Wirtschaftlichkeit und Energieeffizienz.',
     category: 'cooking',
     icon: 'Flame',
-    image: '/images/kueche_l900.jpg',
+    image: '/images/kueche_l900_clean.png',
     imageLabel: 'Originalfoto: Lotus Großküchenblock L900',
     features: [
       'Thermische Herdanlagen (Elektro & Gas)',
@@ -77,7 +77,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     fullDesc: 'Das Herzstück jeder modernen Profiküche: Vielseitige Heißluftdämpfer und Kombidämpfer für schonendes Dämpfen, Backen und Braten. Wir liefern, montieren und warten Markengeräte aller Kapazitäten für Gastronomie und Gemeinschaftsverpflegung.',
     category: 'cooking',
     icon: 'UtensilsCrossed',
-    image: '/images/kombidaempfer_retigo.png',
+    image: '/images/kombidaempfer_retigo_clean.png',
     imageLabel: 'Originalfoto: Retigo Kombidämpfer',
     features: [
       'Marken-Kombidämpfer für 6 bis 20 Einschübe',
@@ -95,7 +95,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     fullDesc: 'Höchste Hygiene, blitzsauberes Geschirr und optimierte Taktzeiten: Gläserspülmaschinen, Untertisch-Geschirrspüler, Haubenspülmaschinen und Korbtransportanlagen namhafter Hersteller für Gastro, Pflege und Kantinen.',
     category: 'wash-cool',
     icon: 'Sparkles',
-    image: '/images/spuelmaschine_smeg.png',
+    image: '/images/spuelmaschine_smeg_clean.png',
     imageLabel: 'Originalfoto: Smeg Gewerbespülmaschine HTY615DS',
     features: [
       'Gläser- & Bistro-Spülmaschinen',
@@ -113,7 +113,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     fullDesc: 'Zuverlässige Einhaltung der Kühlkette nach HACCP: Gewerbekühlschränke, Tiefkühlschränke, Kühltische mit Schubladen oder Türen, Saladetten, Schockfroster und Präsentationstheken.',
     category: 'wash-cool',
     icon: 'Snowflake',
-    image: '/images/kombidaempfer_unox.png',
+    image: '/images/kombidaempfer_unox_clean.png',
     imageLabel: 'Originalgerät: Unox Gewerbetechnik',
     features: [
       'Umluft-Gewerbekühlschränke & Tiefkühlung',
@@ -131,7 +131,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     fullDesc: 'Hygienische, robuste und langlebige Arbeitsflächen nach Maß: Arbeitstische, Spültische mit Becken, Hängeschränke, Wandborde, Wärmeschränke und fahrbare Edelstahlwagen aus hochwertigem V2A-Chrom-Nickel-Stahl.',
     category: 'equipment',
     icon: 'ShieldCheck',
-    image: '/images/kueche_l900.jpg',
+    image: '/images/kueche_l900_clean.png',
     imageLabel: 'Originalfoto: Großküchen-Edelstahlblock',
     features: [
       'Arbeitstische mit Grundboden oder Schubladen',
@@ -149,7 +149,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     fullDesc: 'Perfekter Kaffeegenuss für Frühstücksbuffet, Restaurant, Café oder Tagungsbereich. Filterkaffeemaschinen, Mengenbrüher, Thermoskannenstationen und gewerbliche Kaffeemaschinen inklusive Wartungs- und Entkalkungsservice.',
     category: 'equipment',
     icon: 'Coffee',
-    image: '/images/kombidaempfer_unox.png',
+    image: '/images/kombidaempfer_unox_clean.png',
     imageLabel: 'Originalpartner: Bravilor Bonamat & Animo',
     features: [
       'Gewerbliche Filterkaffeemaschinen & Rundfiltergeräte',
@@ -167,7 +167,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     fullDesc: 'Warmhaltebecken, Bain-Maries, beheizte und gekühlte Speisenausgaben sowie isolierte Speisentransportbehälter (Thermoboxen und Speisentransportwagen) für Catering, Schulen und Pflegeheime.',
     category: 'equipment',
     icon: 'Truck',
-    image: '/images/kombidaempfer_retigo_gross.png',
+    image: '/images/kombidaempfer_retigo_gross_clean.png',
     imageLabel: 'Originalfoto: Retigo B 2011 Großsystem',
     features: [
       'Bain-Maries (Elektro & Wasserbad)',
@@ -185,7 +185,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     fullDesc: 'Kalkschutz und beste Wasserqualität schützen Kombidämpfer, Kaffeemaschinen und Spültechnik vor kostspieligen Schäden. Wir analysieren Ihre Wasserhärte und montieren die passende Entkalkungs- und Filtertechnik.',
     category: 'wash-cool',
     icon: 'Droplets',
-    image: '/images/spuelmaschine_smeg.png',
+    image: '/images/spuelmaschine_smeg_clean.png',
     imageLabel: 'Wassertechnik & Kalkschutz (BRITA / WTA)',
     features: [
       'Teilentsalzung & Vollentsalzungspatronen',
@@ -205,6 +205,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     icon: 'Cog',
     image: '/images/ersatzteile_zubehoer.jpg',
     imageLabel: 'Gastro-Ersatzteile & Zubehörkomponenten',
+    isPhoto: true,
     features: [
       'Original-Ersatzteile führender Gastro-Hersteller',
       'Reinigungstabs & Pflegemittel für Kombidämpfer',
@@ -221,7 +222,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     fullDesc: 'Komplette Küchenausstattungen aus einer Hand: Schneidemaschinen, Gemüseschneider, Stabmixer, Vakuumierer, Bain-Maries, Toaster und professionelles Küchenkleininventar für einen reibungslosen Workflow.',
     category: 'equipment',
     icon: 'PackageCheck',
-    image: '/images/kombidaempfer_retigo.png',
+    image: '/images/kombidaempfer_retigo_clean.png',
     imageLabel: 'Gastronomie-Ausstattung von A bis Z',
     features: [
       'Aufschnittmaschinen, Fleischwölfe & Gemüseschneider',
@@ -241,6 +242,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     icon: 'Wrench',
     image: '/images/kaffeemaschinen_reparatur.jpg',
     imageLabel: 'Fachgerechte Werkstatt-Reparatur & Wartung',
+    isPhoto: true,
     features: [
       'Annahmestelle in Pößneck (Malmsgelänge 13)',
       'Gewerbegeräte & Haushalts-Kaffeevollautomaten',
