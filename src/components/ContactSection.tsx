@@ -316,7 +316,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 {mapMode === 'satellite' ? (
                   <div className="relative w-full h-full">
                     <img
-                      src="/images/standort_satellit_hd.jpg"
+                      src="./images/standort_satellit_hd.jpg"
                       alt="Google Maps Satellitenaufnahme: Malmsgelänge 13, 07381 Pößneck"
                       className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     />

@@ -20,7 +20,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreServices }) 
             {/* Real commercial kitchen visual from gastro-weschenfelder.de */}
             <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/95 via-zinc-900/85 to-zinc-900/50 z-10" />
             <img
-              src="/images/kueche_l900.jpg"
+              src="./images/kueche_l900.jpg"
               alt="Großküchen-Kochblock Lotus L900 von Gastrotechnik Weschenfelder"
               className="absolute inset-0 w-full h-full object-cover object-center opacity-45 scale-102 transition-transform duration-700"
             />

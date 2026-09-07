@@ -22,7 +22,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
             <div className="flex items-center gap-3">
               <div className="w-11 h-11 rounded-xl bg-white border border-zinc-700 flex items-center justify-center p-1 overflow-hidden shrink-0">
                 <img
-                  src="/images/logo.jpg"
+                  src="./images/logo.jpg"
                   alt="Gastrotechnik Weschenfelder"
                   className="w-full h-full object-contain"
                   onError={(e) => {

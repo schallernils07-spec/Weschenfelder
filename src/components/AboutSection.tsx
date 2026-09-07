@@ -13,7 +13,7 @@ export const AboutSection: React.FC = () => {
           {/* Bento Tile 1: Visual & Founder Tile with Real Google Maps Aerial (col-span-5) */}
           <div className="lg:col-span-5 relative rounded-3xl overflow-hidden shadow-xs border border-zinc-200 bg-zinc-950 min-h-[460px] flex flex-col justify-between p-6">
             <img
-              src="/images/standort_satellit_hd.jpg"
+              src="./images/standort_satellit_hd.jpg"
               alt="Google Maps Luftbild: Standort Gastrotechnik Weschenfelder, Malmsgelänge 13, 07381 Pößneck"
               className="absolute inset-0 w-full h-full object-cover object-center opacity-85 hover:scale-105 transition-transform duration-700"
             />

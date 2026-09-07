@@ -89,7 +89,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
               title="Gastrotechnik Weschenfelder Pößneck"
             >
               <img
-                src="/images/logo.jpg"
+                src="./images/logo.jpg"
                 alt="Gastrotechnik Weschenfelder"
                 className="h-12 sm:h-14 w-auto max-w-[220px] sm:max-w-[280px] object-contain transition-transform group-hover:scale-105"
               />
