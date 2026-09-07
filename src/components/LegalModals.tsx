@@ -46,18 +46,17 @@ export const LegalModals: React.FC<LegalModalsProps> = ({ activeModal, onClose }
                 <h4 className="font-bold text-zinc-900 text-base mb-2">Angaben gemäß § 5 TMG</h4>
                 <p>
                   <strong>{COMPANY_INFO.name}</strong><br />
-                  Inhaber: {COMPANY_INFO.owner}<br />
-                  {COMPANY_INFO.address.street}<br />
-                  {COMPANY_INFO.address.zip} {COMPANY_INFO.address.city}
+                  Nils Schaller<br />
+                  Bergstraße 11<br />
+                  07381 Oppurg
                 </p>
               </div>
 
               <div>
                 <h4 className="font-bold text-zinc-900 text-base mb-2">Kontakt</h4>
                 <p>
-                  Telefon: {COMPANY_INFO.phone}<br />
-                  E-Mail: {COMPANY_INFO.email}<br />
-                  Website: {COMPANY_INFO.website}
+                  Telefon: +49 1515 9157627<br />
+                  E-Mail: schallernils07@gmail.com<br />
                 </p>
               </div>
 
@@ -102,11 +101,11 @@ export const LegalModals: React.FC<LegalModalsProps> = ({ activeModal, onClose }
                 <h4 className="font-bold text-zinc-900 text-base mb-2">2. Verantwortliche Stelle</h4>
                 <p>
                   Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO):<br />
-                  <strong>{COMPANY_INFO.name}</strong><br />
-                  Inhaber: {COMPANY_INFO.owner}<br />
-                  {COMPANY_INFO.address.street}, {COMPANY_INFO.address.zip} {COMPANY_INFO.address.city}<br />
-                  Telefon: {COMPANY_INFO.phone}<br />
-                  E-Mail: {COMPANY_INFO.email}
+                  <strong></strong><br />
+                  Nils Schaller<br />
+                  Bergstraße 11, 07381 Oppugrg<br />
+                  Telefon: +49 1515 9157627<br />
+                  E-Mail: schallernils07@gmail.com
                 </p>
               </div>
 
